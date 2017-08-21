@@ -1,5 +1,4 @@
 <?php
-
     if (!isset($_SESSION)) session_start();
 
     $nivel_necessario = 2;
