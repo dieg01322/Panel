@@ -1,0 +1,248 @@
+:root {
+    font-size: 16px;
+}
+
+/**************************************/
+/*************** USUARIO **************/
+#usuario {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+#usuario h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    font-size: 1.62rem;
+    padding: 20px 0;
+}
+.usuario__form {
+    padding: 15px;
+    box-shadow: 1px 1px 1px 1px rgba(0,162,232,.9);
+}
+.usuario__input {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 0;
+}
+.usuario__input label {
+    padding-top: 5px;
+    min-width: 65px;
+}
+.usuario__input input {
+    width: 200px;
+    height: 20px;
+    padding: 2px;
+    font-size: 16px;
+    font-size: 1rem;
+    border: 0;
+    box-shadow: 1px 1px 1px 1px rgba(0,162,232,.9);
+}
+.usuario__button {
+    float: right;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 10px;
+    padding: 5px 20px;
+    border: 0;
+    box-shadow: 1px 1px 1px 1px rgba(0,162,232,.9);
+    background-image: linear-gradient(to bottom, #ffffff, #7dd8ff 200%);
+}
+.usuario__button:hover {
+    background-color: #ffffff;
+    background-image: none;
+}
+
+/**************************************/
+/*************** HEADER ***************/
+.header {
+    width: 100%;
+    height: 60px;
+    background-color:#ffffff;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #373738;
+    box-shadow: 1px 1px 5px 1px rgba(0,0,0,.5);
+    background-image: linear-gradient(to bottom, #ffffff, #7dd8ff 300%);
+}
+.header__logo {
+    text-align: center;
+    margin-left: 15px;
+    padding: 5px;
+    height: 80%;
+}
+.header__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-size: 1.37rem;
+    font-weight: 700;
+    width: 100%;
+    height: 100%;
+}
+.header__close {
+    margin-right: 20px;
+    height: 35px;
+}
+/**************************************/
+/*************** MENU *****************/
+.menu {
+    width: 280px; 
+}
+.menu__responsivo {
+    display: none;
+}
+.menu__lateral {
+    height: 100%;
+    position: fixed;
+    top: 100px;
+    overflow: hidden;
+    transition: all .2s;
+    background-color: #ffffff;
+}
+.menu__button {
+    position: fixed;
+    margin-top: 150px;
+    height: 20px;
+}
+.menu__lateral ul li a {
+    display: block;
+    font-size: 16px;
+    font-size: 1rem;
+    padding: 10px;
+    border-bottom: solid 1px #373738;
+    transition: all .2s;
+}
+.menu__lateral ul li a:hover {
+    letter-spacing: 1px;
+}
+.menu__lateral ul li spam {
+    float: right;
+    padding-right: 5px;
+}
+.menu__principal {
+    width: 230px;
+    font-weight: 700;
+}
+.menu__sub {
+    width: 200px;
+    left: -500px;
+    background-color: #ffffff;
+}
+.menu__voltar {
+    font-weight: 700;
+}
+#submenu-cadastros:target,
+#submenu-sessoes:target,
+#submenu-relatorios:target {
+    transform: translateX(500px);
+    box-shadow: 2px 2px 5px 2px rgba(0,0,0,.5);
+}
+/**************************************/
+/*************** ICONS ***************/
+.conteudo {
+    display: flex;
+    padding-bottom: 30px;
+}
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    flex-wrap: wrap;
+}
+.buttons__shortcut {
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    margin: 35px 70px 35px 70px;
+    box-shadow: 1px 1px 1px 1px rgba(0,162,232,.9);
+    text-align: center;
+    background-image: linear-gradient(to bottom, #ffffff, #7dd8ff 200%);
+}
+.buttons__shortcut:hover {
+    background-image: none;   
+}
+.buttons__shortcut img {
+    margin-top: 5px;
+    height: 70px;
+}
+.buttons__shortcut h3 {
+    margin-top: 5px;
+    font-size: 14px;
+    font-size: 0.87rem;
+    text-decoration: none;
+}
+
+/**************************************/
+/*************** FOOTER ***************/
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+}
+small {
+    color: #ffffff;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+/*=====================================================================*/
+
+@media only screen and (max-width: 800px) {
+    :root {
+        font-size: 14px;
+    }
+    .header__title {
+        display: none;
+    }
+    small {
+        text-align: center;
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 470px) {
+    .header__logo {
+        height: 60%;
+    }
+    .header__close {
+        height: 25px;
+    }
+    .menu {
+        position: absolute;
+    }
+    .menu__responsivo {
+        text-align: center;
+        display: block;
+    }
+    .menu__lateral {
+        left: -500px;
+        top: 61px;
+    }
+    .menu__principal {
+        width: 100%;
+    }
+    #menu-principal:target {
+        transform: translateX(500px);
+    }
+    .menu__sub {
+        width: 100%;
+    }
+}
+
